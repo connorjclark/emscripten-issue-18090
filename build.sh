@@ -21,12 +21,16 @@ cd build
 EMCC_FLAGS=(
   -s USE_SDL=2
   -s USE_PTHREADS=1
-  -I "$EMCC_CACHE_INCLUDE_DIR/AL"
 )
 LINKER_FLAGS=(
   --shared-memory
   -lpthread
 )
+
+# Wish I knew how to remove this.
+EMCC_CACHE_DIR="$(dirname $(which emcc))/cache"
+EMCC_CACHE_INCLUDE_DIR="$EMCC_CACHE_DIR/sysroot/include"
+EMCC_CACHE_LIB_DIR="$EMCC_CACHE_DIR/sysroot/lib/wasm32-emscripten"
 
 emcmake cmake \
   -G "Ninja Multi-Config" \
