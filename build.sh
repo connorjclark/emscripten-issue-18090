@@ -21,27 +21,14 @@ cd build
 EMCC_FLAGS=(
   -s USE_SDL=2
   -s USE_SDL_MIXER=2
-  -s USE_PTHREADS=1
+  -s USE_PTHREADS=1 # Works if commented out.
 )
 LINKER_FLAGS=(
   -s SDL2_MIXER_FORMATS="['mid','mod','ogg']"
-  --shared-memory
-  -lpthread
 )
-
-# Wish I knew how to remove this.
-EMCC_CACHE_DIR="$(dirname $(which emcc))/cache"
-EMCC_CACHE_INCLUDE_DIR="$EMCC_CACHE_DIR/sysroot/include"
-EMCC_CACHE_LIB_DIR="$EMCC_CACHE_DIR/sysroot/lib/wasm32-emscripten"
 
 emcmake cmake \
   -G "Ninja Multi-Config" \
-  -D ALLEGRO_SDL=ON \
-  -D WANT_ALLOW_SSE=OFF \
-  -D WANT_OPENAL=OFF \
-  -D WANT_ALSA=OFF \
-  -D SDL2_INCLUDE_DIR="$EMCC_CACHE_INCLUDE_DIR" \
-  -D SDL2_LIBRARY="$EMCC_CACHE_LIB_DIR/libSDL2-mt.a" \
   -D CMAKE_C_FLAGS="${EMCC_FLAGS[*]}" \
   -D CMAKE_CXX_FLAGS="${EMCC_FLAGS[*]}" \
   -D CMAKE_EXE_LINKER_FLAGS="${LINKER_FLAGS[*]}" \
