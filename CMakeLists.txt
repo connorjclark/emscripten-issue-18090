@@ -6,8 +6,6 @@ FetchContent_Declare(
   allegro5
   GIT_REPOSITORY https://github.com/liballeg/allegro5.git
   GIT_TAG        5.2.7.0
-#   GIT_REPOSITORY https://github.com/connorjclark/allegro5.git
-#   GIT_TAG        cf819df50e1554e4cdef2d28fa41ad96dcdfd5ba
 )
 FetchContent_GetProperties(allegro5)
 if(NOT allegro5_POPULATED)
