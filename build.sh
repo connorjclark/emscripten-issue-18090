@@ -45,4 +45,4 @@ emcmake cmake \
   -D CMAKE_EXE_LINKER_FLAGS="${LINKER_FLAGS[*]}" \
   ..
 
-cmake --build . --config Debug -t app
+cmake --build . --config RelWithDebInfo -t al_example
