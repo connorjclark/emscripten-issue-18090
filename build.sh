@@ -20,9 +20,11 @@ cd build
 
 EMCC_FLAGS=(
   -s USE_SDL=2
+  -s USE_SDL_MIXER=2
   -s USE_PTHREADS=1
 )
 LINKER_FLAGS=(
+  -s SDL2_MIXER_FORMATS="['mid','mod','ogg']"
   --shared-memory
   -lpthread
 )
