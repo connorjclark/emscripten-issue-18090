@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  compile-web:
+    runs-on: macos-12
+
+    steps:
+      - name: git clone
+        uses: actions/checkout@v2
+
+      - uses: mymindstorm/setup-emsdk@v11
+      - run: brew install ninja
+      
+      - run: bash build.sh
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: emscripten cmake
+          path: |
+            ${{ github.workspace }}/build/CMakeFiles/CMakeOutput.log
+            ${{ github.workspace }}/build/CMakeFiles/CMakeError.log
