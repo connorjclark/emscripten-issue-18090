@@ -20,7 +20,7 @@ cd build
 
 EMCC_FLAGS=(
   -s USE_SDL=2
-  -s USE_SDL_MIXER=2
+  -s USE_SDL_MIXER=2 # Works if commented out.
   -s USE_PTHREADS=1 # Works if commented out.
 )
 LINKER_FLAGS=(
