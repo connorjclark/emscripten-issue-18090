@@ -1,0 +1,1691 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /Users/connorclark/code/emscripten-issue-18090/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_4b93f && [1/2] Building C object CMakeFiles/cmTC_4b93f.dir/Debug/src.c.o
+FAILED: CMakeFiles/cmTC_4b93f.dir/Debug/src.c.o 
+/Users/connorclark/tools/emsdk/upstream/emscripten/emcc -DCMAKE_HAVE_LIBC_PTHREAD -DCMAKE_INTDIR=\"Debug\"  -s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_PTHREADS=1  -g -MD -MT CMakeFiles/cmTC_4b93f.dir/Debug/src.c.o -MF CMakeFiles/cmTC_4b93f.dir/Debug/src.c.o.d -o CMakeFiles/cmTC_4b93f.dir/Debug/src.c.o -c /Users/connorclark/code/emscripten-issue-18090/build/CMakeFiles/CMakeTmp/src.c
+cache:INFO: generating port: sysroot/lib/wasm32-emscripten/libSDL2_mixer_ogg.a... (this will be cached in "/Users/connorclark/tools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libSDL2_mixer_ogg.a" for subsequent builds)
+root:INFO: building port: sdl2_mixer
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+Traceback (most recent call last):
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return self.get(name, *args, **kwargs)
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+emcc: error: Subprocess 1/28 failed (returned 1)! (cmdline: /Users/connorclark/tools/emsdk/upstream/emscripten/emcc -c /Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports/sdl2_mixer/SDL_mixer-release-2.0.4/timidity/common.c -o /Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports-builds/sdl2_mixer/timidity/common.c.o -g -sSTRICT -Werror -O2 -I/Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports/sdl2_mixer/SDL_mixer-release-2.0.4 -sUSE_SDL=2 -O2 -DMUSIC_WAV -sUSE_VORBIS -DMUSIC_OGG)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    ret = run(args)
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return func(*args, **kwds)
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /Users/connorclark/code/emscripten-issue-18090/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_1d971 && [1/2] Building C object CMakeFiles/cmTC_1d971.dir/Debug/CheckFunctionExists.c.o
+FAILED: CMakeFiles/cmTC_1d971.dir/Debug/CheckFunctionExists.c.o 
+/Users/connorclark/tools/emsdk/upstream/emscripten/emcc -DCMAKE_INTDIR=\"Debug\"  -s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_PTHREADS=1 -DCHECK_FUNCTION_EXISTS=pthread_create -g -MD -MT CMakeFiles/cmTC_1d971.dir/Debug/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_1d971.dir/Debug/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_1d971.dir/Debug/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CheckFunctionExists.c
+cache:INFO: generating port: sysroot/lib/wasm32-emscripten/libSDL2_mixer_ogg.a... (this will be cached in "/Users/connorclark/tools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libSDL2_mixer_ogg.a" for subsequent builds)
+root:INFO: building port: sdl2_mixer
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    cmd = get_clang_command(input_file)
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+emcc: error: Subprocess 1/28 failed (returned 1)! (cmdline: /Users/connorclark/tools/emsdk/upstream/emscripten/emcc -c /Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports/sdl2_mixer/SDL_mixer-release-2.0.4/timidity/common.c -o /Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports-builds/sdl2_mixer/timidity/common.c.o -g -sSTRICT -Werror -O2 -I/Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports/sdl2_mixer/SDL_mixer-release-2.0.4 -sUSE_SDL=2 -O2 -DMUSIC_WAV -sUSE_VORBIS -DMUSIC_OGG)
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+Traceback (most recent call last):
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    self.acquire_cache_lock(reason)
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return func(*args, **kwds)
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    cmd = get_clang_command(input_file)
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: /Users/connorclark/code/emscripten-issue-18090/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_10d4c && [1/2] Building C object CMakeFiles/cmTC_10d4c.dir/Debug/CheckFunctionExists.c.o
+FAILED: CMakeFiles/cmTC_10d4c.dir/Debug/CheckFunctionExists.c.o 
+/Users/connorclark/tools/emsdk/upstream/emscripten/emcc -DCMAKE_INTDIR=\"Debug\"  -s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_PTHREADS=1 -DCHECK_FUNCTION_EXISTS=pthread_create -g -MD -MT CMakeFiles/cmTC_10d4c.dir/Debug/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_10d4c.dir/Debug/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_10d4c.dir/Debug/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CheckFunctionExists.c
+cache:INFO: generating port: sysroot/lib/wasm32-emscripten/libSDL2_mixer_ogg.a... (this will be cached in "/Users/connorclark/tools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libSDL2_mixer_ogg.a" for subsequent builds)
+root:INFO: building port: sdl2_mixer
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    ret = run(args)
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+emcc: error: Subprocess 1/28 failed (returned 1)! (cmdline: /Users/connorclark/tools/emsdk/upstream/emscripten/emcc -c /Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports/sdl2_mixer/SDL_mixer-release-2.0.4/timidity/common.c -o /Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports-builds/sdl2_mixer/timidity/common.c.o -g -sSTRICT -Werror -O2 -I/Users/connorclark/tools/emsdk/upstream/emscripten/cache/ports/sdl2_mixer/SDL_mixer-release-2.0.4 -sUSE_SDL=2 -O2 -DMUSIC_WAV -sUSE_VORBIS -DMUSIC_OGG)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    sys.exit(main(sys.argv))
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+Traceback (most recent call last):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4120, in <module>
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    sys.exit(main(sys.argv))
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return func(*args, **kwds)
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 4113, in main
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    self.acquire_cache_lock(reason)
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return next(self.gen)
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    ret = run(args)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    ret = run(args)
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 1160, in run
+    linker_inputs = phase_compile_inputs(options, state, newargs, input_files)
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2807, in phase_compile_inputs
+    compile_source_file(i, input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2787, in compile_source_file
+    cmd = get_clang_command(input_file)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 2721, in get_clang_command
+    return get_compiler(src_file) + get_cflags(state.orig_args, use_cxx(src_file)) + compile_args + [src_file]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/emcc.py", line 903, in get_cflags
+    ports.add_cflags(cflags, settings)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/__init__.py", line 396, in add_cflags
+    port.get(Ports, settings, shared)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/ports/sdl2.py", line 76, in get
+    return [shared.Cache.get_lib(get_lib_name(settings), create, what='port')]
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 126, in get_lib
+    return self.get(name, *args, **kwargs)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 142, in get
+    with self.lock(shortname):
+  File "/Users/connorclark/tools/emsdk/python/3.9.2_64bit/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 62, in lock
+    self.acquire_cache_lock(reason)
+  File "/Users/connorclark/tools/emsdk/upstream/emscripten/tools/cache.py", line 39, in acquire_cache_lock
+    assert 'EM_CACHE_IS_LOCKED' not in os.environ, f'attempt to lock the cache while a parent process is holding the lock ({reason})'
+AssertionError: attempt to lock the cache while a parent process is holding the lock (sysroot/lib/wasm32-emscripten/libSDL2.a)
+ninja: build stopped: subcommand failed.
+
+
+
